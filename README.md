@@ -9,4 +9,4 @@ to have a little fun.
 Run the file. When prompted, put in the name of some famous database or bank.
 For example, "the CIA" or "the Bank of America". When prompted again, type
 either "transfer money" or "download sensitive files", according to the
-supposed source. 
+supposed source. To stop, type "end".
