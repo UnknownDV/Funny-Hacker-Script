@@ -1,0 +1,5 @@
+Change log:
+
+> Improved flavor text
+> Added a random IP generator to use in flavor text (with all of three choices)
+> Reduced overall shitty-ness

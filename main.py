@@ -1,12 +1,18 @@
 import time
+import random
 from os import system, name
+
+
+ips = ["128.11.234.4", "174.233.46.73", "134.76.845.9"]
+ipChoice = random.choice(ips)
+
 
 version = "0.1.1"
 print(f"SERIAL ACCESS BUS v{version}") # This makes it look more legit
-print("Unauthorised access will result in criminal proceedings.")
-      
-database = input("Target to attack: ")
-print(f"ESTABLISHING CONNECTION TO 128.11.234.4 {database}")
+print("WARNING!\nUNAUTHORIZED ACCESS IS STRICTLY PROHIBITED!\nACCESS WITHOUT PERMISSION MAY RESULT IN CRIMINAL PERSECUTION.\nPROCEED WITH CAUTION.")
+
+target = input("Target to attack: ")
+print(f"ESTABLISHING CONNECTION TO {ipChoice} ({target})")
 print() # Blank line
 
 def clear_screen():
@@ -22,10 +28,10 @@ while n <= 100:
         time.sleep(1)
 print()
 print("Firewall breached")
-print(f"Successfully accessed {database}")
+print(f"Successfully accessed {target}")
 
 while True:
-    
+
     userinput = input("What would you like to do? : ")
     if userinput == "transfer money":
         progress = 0
@@ -41,7 +47,7 @@ while True:
         m = 0
         while m <= 100:
             if m == 100:
-                print("Downloaded files to User/21rcrank/user/Documents/hidden_files/stolenFiles")
+                print("Downloaded files to User/user/Documents/hidden_files/stolenFiles")
                 break
             else:
                 print("Downloading sensitive files... {}".format(m))
@@ -52,4 +58,3 @@ while True:
         break
     else:
         print("Invalid input")
-
