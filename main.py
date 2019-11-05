@@ -7,11 +7,7 @@ import sys
 username = (SCDynamicStoreCopyConsoleUser(None, None, None) or [None])[0]
 username = [username, ""][username in ["loginwindow", None, ""]]
 
-ip1 = random.randint(0, 255)
-ip2 = random.randint(0, 255)
-ip3 = random.randint(0, 255)
-ip4 = random.randint(0, 255)
-ip = f"{ip1}.{ip2}.{ip3}.{ip4}"
+ip = '{}.{}.{}.{}'.format(*__import__('random').sample(range(0,255),4))
 
 version = "0.1.1"
 print(f"Hello, {username}")
