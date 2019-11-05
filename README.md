@@ -1,4 +1,4 @@
-# Funny Hacker Script V2.0
+# Funny Hacker Script V2.1
 
 This is just a fun little script I decided to write to make it look like you're
 hacking something. Use this to make yourself look smarter than you are or just
