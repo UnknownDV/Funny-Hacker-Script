@@ -5,7 +5,7 @@ from SystemConfiguration import SCDynamicStoreCopyConsoleUser
 import sys
 
 username = (SCDynamicStoreCopyConsoleUser(None, None, None) or [None])[0]
-username = [username,""][username in [u"loginwindow", None, u""]]
+username = [username, ""][username in ["loginwindow", None, ""]]
 
 ip1 = random.randint(0, 255)
 ip2 = random.randint(0, 255)
@@ -15,26 +15,32 @@ ip = f"{ip1}.{ip2}.{ip3}.{ip4}"
 
 version = "0.1.1"
 print(f"Hello, {username}")
-print(f"SERIAL ACCESS BUS v{version}") # This makes it look more legit
-print("WARNING!\nUNAUTHORIZED ACCESS IS STRICTLY PROHIBITED!\
+print(f"SERIAL ACCESS BUS v{version}")  # This makes it look more legit
+print(
+    "WARNING!\nUNAUTHORIZED ACCESS IS STRICTLY PROHIBITED!\
       \nACCESS WITHOUT PERMISSION MAY RESULT IN CRIMINAL PERSECUTION.\
-      \nPROCEED WITH CAUTION.")
+      \nPROCEED WITH CAUTION."
+)
 
 target = input("Target to attack: ")
 print(f"ESTABLISHING CONNECTION TO {ip} ({target})")
-print() # Blank line
+print()  # Blank line
+
 
 def clear_screen():
-    if name == "nt": # This is Windows
-        _ = system('cls') # Much simpler. The underscore is to prevent it printing a random 0 to the screen
-    else: #Literally everything else
-        _ = system('clear')
+    if name == "nt":  # This is Windows
+        _ = system(
+            "cls"
+        )  # Much simpler. The underscore is to prevent it printing a random 0 to the screen
+    else:  # Literally everything else
+        _ = system("clear")
+
 
 n = 0
 while n <= 100:
-        print(f"Breaching fire wall... {n}%", end="\r")
-        n += 5
-        time.sleep(1)
+    print(f"Breaching fire wall... {n}%", end="\r")
+    n += 5
+    time.sleep(1)
 print()
 print("Firewall breached")
 print(f"Successfully accessed {target}")
@@ -56,7 +62,9 @@ while True:
         m = 0
         while m <= 100:
             if m == 100:
-                print(f"Downloaded files to User/{username}/Documents/hidden_files/stolenFiles")
+                print(
+                    f"Downloaded files to User/{username}/Documents/hidden_files/stolenFiles"
+                )
                 break
             else:
                 print("Downloading sensitive files... {}".format(m))
