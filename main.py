@@ -4,6 +4,7 @@ from os import system, name
 from SystemConfiguration import SCDynamicStoreCopyConsoleUser
 import sys
 
+options = ["Transfer Money", "download sensitive files", "end"]
 username = (SCDynamicStoreCopyConsoleUser(None, None, None) or [None])[0]
 username = [username, ""][username in ["loginwindow", None, ""]]
 
@@ -24,11 +25,9 @@ print()  # Blank line
 
 
 def clear_screen():
-    if name == "nt":  # This is Windows
-        _ = system(
-            "cls"
-        )  # Much simpler. The underscore is to prevent it printing a random 0 to the screen
-    else:  # Literally everything else
+    if name == "nt":# This is Windows
+        _ = system("cls")# Much simpler. The underscore is to prevent it printing a random 0 to the screen
+    else:# Literally everything else
         _ = system("clear")
 
 
@@ -43,8 +42,17 @@ print(f"Successfully accessed {target}")
 
 while True:
 
-    userinput = input("What would you like to do? : ")
-    if userinput == "transfer money":
+    print("Pick an option")
+    
+    for i in range(len(options)):
+        print(str(i+1) + ":", options[i])
+    userinput = int(input("What would you like to do? : "))
+
+    if userinput in range(1, 5):
+        userinput = options[userinput-1]
+    else:
+        print("Invalid input!")       
+    if userinput == "Transfer Money":
         progress = 0
         while progress <= 100:
             if progress == 100:
