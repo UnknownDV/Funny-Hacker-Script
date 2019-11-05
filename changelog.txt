@@ -1,5 +1,12 @@
 Change log:
 
+V 2.0
 > Improved flavor text
 > Added a random IP generator to use in flavor text (with all of three choices)
 > Reduced overall shitty-ness
+
+
+V 2.1
+> Added scripting to find the username of the user
+> Added an actual random ip generator that doesn't rely on lazy shitty-ness
+> Slightly further improved flavor text

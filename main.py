@@ -7,19 +7,21 @@ import sys
 username = (SCDynamicStoreCopyConsoleUser(None, None, None) or [None])[0]
 username = [username,""][username in [u"loginwindow", None, u""]]
 
-ips = ["128.11.234.4",
-       "174.233.46.73",
-       "134.76.845.9"]
-ipChoice = random.choice(ips)
+ip1 = random.randint(0, 255)
+ip2 = random.randint(0, 255)
+ip3 = random.randint(0, 255)
+ip4 = random.randint(0, 255)
+ip = f"{ip1}.{ip2}.{ip3}.{ip4}"
 
 version = "0.1.1"
+print(f"Hello, {username}")
 print(f"SERIAL ACCESS BUS v{version}") # This makes it look more legit
 print("WARNING!\nUNAUTHORIZED ACCESS IS STRICTLY PROHIBITED!\
       \nACCESS WITHOUT PERMISSION MAY RESULT IN CRIMINAL PERSECUTION.\
       \nPROCEED WITH CAUTION.")
 
 target = input("Target to attack: ")
-print(f"ESTABLISHING CONNECTION TO {ipChoice} ({target})")
+print(f"ESTABLISHING CONNECTION TO {ip} ({target})")
 print() # Blank line
 
 def clear_screen():
