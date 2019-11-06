@@ -7,10 +7,15 @@ import sys
 username = (SCDynamicStoreCopyConsoleUser(None, None, None) or [None])[0]
 username = [username,""][username in [u"loginwindow", None, u""]]
 
+<<<<<<< Updated upstream
 ips = ["128.11.234.4",
        "174.233.46.73",
        "134.76.845.9"]
 ipChoice = random.choice(ips)
+=======
+ip = "{}.{}.{}.{}".format(*__import__("random").sample(range(0, 255), 4))
+money = str(random.randint(10000000, 99999999))
+>>>>>>> Stashed changes
 
 version = "0.1.1"
 print(f"SERIAL ACCESS BUS v{version}") # This makes it look more legit
@@ -44,7 +49,7 @@ while True:
         progress = 0
         while progress <= 100:
             if progress == 100:
-                print(f"Transferred 56743873 to {username}'s bank.")
+                print(f"Transferred {money} to {username}'s bank.")
                 break
             else:
                 print("transferring... {}".format(progress))
