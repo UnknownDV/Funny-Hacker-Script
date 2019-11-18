@@ -2,11 +2,13 @@ import time
 import random
 from os import system, name
 from SystemConfiguration import SCDynamicStoreCopyConsoleUser
+from classes.classes import Options
 import sys
 
 username = (SCDynamicStoreCopyConsoleUser(None, None, None) or [None])[0]
 username = [username,""][username in [u"loginwindow", None, u""]]
 
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 ips = ["128.11.234.4",
        "174.233.46.73",
@@ -15,6 +17,9 @@ ipChoice = random.choice(ips)
 =======
 ip = "{}.{}.{}.{}".format(*__import__("random").sample(range(0, 255), 4))
 money = str(random.randint(10000000, 99999999))
+>>>>>>> Stashed changes
+=======
+ip = "{}.{}.{}.{}".format(*__import__("random").sample(range(0, 255), 4))
 >>>>>>> Stashed changes
 
 version = "0.1.1"
@@ -28,10 +33,20 @@ print(f"ESTABLISHING CONNECTION TO {ipChoice} ({target})")
 print() # Blank line
 
 def clear_screen():
+<<<<<<< Updated upstream
     if name == "nt": # This is Windows
         _ = system('cls') # Much simpler. The underscore is to prevent it printing a random 0 to the screen
     else: #Literally everything else
         _ = system('clear')
+=======
+    if name == "nt":  # This is Windows
+        _ = system(
+            "cls"
+        )  # The underscore is to prevent it printing a random 0 to the screen
+    else:  # Literally everything else
+        _ = system("clear")
+
+>>>>>>> Stashed changes
 
 n = 0
 while n <= 100:
@@ -42,6 +57,7 @@ print()
 print("Firewall breached")
 print(f"Successfully accessed {target}")
 
+<<<<<<< Updated upstream
 while True:
 
     userinput = input("What would you like to do? : ")
@@ -70,3 +86,7 @@ while True:
         break
     else:
         print("Invalid input")
+=======
+options = Options(1)
+print(options.run)
+>>>>>>> Stashed changes
